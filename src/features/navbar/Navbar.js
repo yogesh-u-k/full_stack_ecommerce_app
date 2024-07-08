@@ -14,6 +14,7 @@ import {
   ShoppingCartIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const user = {
   name: "Tom Cook",
@@ -76,6 +77,7 @@ function NavBar({ children }) {
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-4 flex items-center md:ml-6">
+                    <Link to="/cart">
                     <button
                       type="button"
                       className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -87,6 +89,7 @@ function NavBar({ children }) {
                         aria-hidden="true"
                       />
                     </button>
+                    </Link>
                     <span className="inline-flex items-center  rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 mb-8 -ml-3 relative">
                       3
                     </span>
@@ -184,6 +187,7 @@ function NavBar({ children }) {
                       {user.email}
                     </div>
                   </div>
+                  <Link to="/cart">
                   <button
                     type="button"
                     className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -192,6 +196,7 @@ function NavBar({ children }) {
                     <span className="sr-only">View notifications</span>
                     <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
+                  </Link>
                   <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                     Badge
                   </span>
